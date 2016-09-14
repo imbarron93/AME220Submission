@@ -9,30 +9,37 @@
 
 		<script>
 			function inputChanged(){
-				var x = $("#borderWidth").val() + "px";
-				$("#result").css("border-width", x);
 
-				var x = "#" + $("#borderColor").val();
-				$("#result").css("border-color", x);
+				var x =$("#Height").val() + "px";
+				$("#result").css("height", x);
 
-				var x = $("#borderRadius").val() + "px";
-				$("#result").css("border-radius", x);
+
+				var x =$("#Width").val() + "px";
+				$("#result").css("width", x);
+
+
+				var x = "#" + $("#backgroundColor").val();
+				$("#result").css("background-color", x);
 			}
 		</script>
 	</head>
 
 	<body>
-	<label for='borderWidth'> Height </label>
-	<input onchange='inputChanged()' type='number' id='borderWidth'>
+	<div align="center">
+	<label for='Height'> Height </label>
+	<input onchange='inputChanged()' type='number' id='Height'>
 	<span> px </span><br>
 
-	<label for='borderColor'> Width  </label>
-	<input onchange='inputChanged()' type='text' id='borderColor'><br>
+	<div align="center">
+	<label for='Width'> Width  </label>
+	<input onchange='inputChanged()' type='number' id='Width'>
+	<span> px </span><br>
 
-	<label for='borderRadius'> Background-Color </label>
-	<input onchange='inputChanged()' type='number' id='borderRadius'>
-	<span> px </span<br>
+	<div align="center">
+	<label for='backgroundColor'> Background-Color # </label>
+	<input onchange='inputChanged()' type='text' id='backgroundColor'>
+	<br><br>
 
-	<div id='result' style='border-style:solid;height:100px;width:100px;background:blue'></div>
+	<div id='result' style='border-style:solid;height:150px;width:150px;background:orange'></div>
 	</body>
 </html>
