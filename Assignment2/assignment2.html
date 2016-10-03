@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta name="format-detection" content="telephone=yes">
+	<style>
+		button.accordion {
+			background-color: #4880b4;
+			color: black;
+			cursor: pointer;
+			padding: 18px;
+			width: 100%;
+			text-align: center;
+			font-size: 22px;
+			border: double;
+			outline: none;
+			transition: 0.4s;
+		}
+
+		button.accordion.active, button.accordion:hover {
+			background-color: black;
+			color: white;
+		}
+
+		div.panel {
+			padding: 0 18px;
+			background-color: white;
+			display: none;
+		}
+
+		div.panel.show {
+			display: block;
+		}
+	</style>
+
+	</head>
+
+	<body class='body' style='margin-left:50px;>
+
+	  <div class='header' id='myHeader'>
+
+		<h1 style='text-align:center'> My Resume </h2>
+
+		<h2 style='text-align:left'> Isaac Barron </h2>
+
+		<div style='text-align:left'>
+		<img height='250' width='250' src='https://72729501-941397660468978474.preview.editmysite.com/uploads/7/2/7/2/72729501/1454911632.png?250'>
+		</div>
+
+		<h2 style='text-align:left'>
+		| Arizona State University,<br> | Tempe, Arizona 85281 <br> |
+		<a style='text-decoration:underline' href='623-221-8965'>623-221-8965 <br> </a>|
+		<a style='text-decoration:underline' href='mailto:imbarron@asu.edu' target="_blank"> imbarron@asu.edu </a>
+		<h4>
+	  </div>
+
+
+		<button class="accordion" id='experience'> Experience </button>
+
+		<div class="panel">
+			<p title="Description of my experience">
+			<b>Evergreen Telemetry (Aug 2013-Present) </b><br>
+			My responsibility is to manufacture the product needed for air balancers.
+			</p>
+
+		</div>
+
+	</div>
+
+	<button class="accordion" id='skills'> Skills </button>
+	<div class="panel">
+
+		<p title="My Skills">
+		<b>Software:</b> MS Office, MySQL, Photoshop <br>
+		<b>Languages:</b> HTML, CSS, JavaScript, experience with Java & C,
+		</p>
+
+	</div>
+
+		<button class="accordion" id='education'> Education </button>
+		<div class="panel">
+
+			<p title="Here are my education descriptions">
+		 	Informatics <br>
+			Ira A. Fulton Schools of Engineering <br>
+			Arizona State University, Tempe, Arizona <br>
+			Graduation Date: Spring 2017 <br>
+			</p>
+
+		</div>
+
+		<button class="accordion" id='awards'> Awards </button>
+		<div class="panel">
+
+			<p title="My Accomplishments">
+			<b> Dean's List </b><br>
+
+			Deans List from the Ira A. Fulton Schools of Engineering at Arizona State University
+			</p>
+		</div>
+
+		<script>
+		var acc = document.getElementsByClassName("accordion");
+		var i;
+
+		for (i = 0; i < acc.length; i++) {
+			acc[i].onclick = function(){
+			this.classList.toggle("active");
+			this.nextElementSibling.classList.toggle("show");
+			}
+		}
+		</script>
+
+	</body>
+</html>
