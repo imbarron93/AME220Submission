@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+  <title>Animate.css!</title>
+  <link rel="stylesheet" href="animate.css">
+</head>
+<body>
+<p align="left">
+  <br><button class="button" id="shake" onclick="play(event)">Shake </button></br>
+  <br><button class="button" id="bounce" onclick="play(event)">Bounce </button></br>
+  <br><button class="button" id="flash" onclick="play(event)">Flash </button></br>
+  <br><button class="button" id="pulse" onclick="play(event)">Pulse </button></br>
+  <br><button class="button" id="rubberBand" onclick="play(event)">Rubberband </button></br>
+  <br><button class="button" id="jello" onclick="play(event)">Jello </button></br>
+  <br><button class="button" id="tada" onclick="play(event)">Tada </button></br>
+  <br><button class="button" id="wobble" onclick="play(event)">Wobble </button></br>
+  <br><button class="button" id="rollOut" onclick="play(event)">Rollout </button></br>
+  <br><button class="button" id="swing" onclick="play(event)">Swing </button></br>
+</p>
+
+
+<div id="animationSandbox" style= "width:400px;height:400px;background:white;position:relative;left:200px;bottom:400px"></div>
+
+
+
+<style>
+  body {
+    margin: 50px;
+    background: black;
+    font-family: sans-serif;
+    text-align: center;
+  }
+
+a.button {
+  background: gray ;
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  border-radius: 10px;
+  /*-webkit-animation-duration: 3s;*/
+  /*-webkit-animation-delay: 2s; */
+  /*-webkit-animation-iteration-count: infinite;*/
+}
+</style>
+
+<script>
+var animationName= "";
+
+  function play(event) {
+    var x = event.target.id;
+    animationName= x;
+    $('#animationSandbox').removeClass().addClass(x + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+      $(this).removeClass();
+    });
+  };
+
+</script>
+
+</body>
+</html>
